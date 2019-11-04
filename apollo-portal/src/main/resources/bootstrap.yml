@@ -10,9 +10,15 @@ eureka:
     #Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认为90秒
     lease-expiration-duration-in-seconds: 3
   client:
+    loginUser:
+      - eureka1
+      - eureka2
+    loginPassword:
+      - eureka1
+      - eureka2
     serviceUrl:
 #      defaultZone: http://eureka-test1.joinboom.net:7201/eureka,http://eureka-test2.joinboom.net:7202/eureka
-      defaultZone: http://eureka-dev1.joinboom.net/eureka-server/eureka/,http://eureka-dev2.joinboom.net/eureka-server/eureka/
+      defaultZone: http://${eureka.client.loginUser[0]}:${eureka.client.loginPassword[0]}@eureka-test1.joinboom.net:7201/eureka,http://${eureka.client.loginUser[1]}:${eureka.client.loginPassword[1]}@eureka-test2.joinboom.net:7202/eureka
     healthcheck:
       enabled: true
     #询问Eureka服务url信息变化的时间间隔（s），默认为300秒
