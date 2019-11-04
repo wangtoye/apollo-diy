@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: apollo-configservice
+  profiles:
+    active: github
+
+ctrip:
+  appid: 100003171
+
+server:
+  port: 7207
+
+logging:
+  file: C:/Users/admin/Desktop/卓尔金服/work/apollo/apollo-source-code/logs/apollo-config.log

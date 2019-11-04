@@ -1,0 +1,26 @@
+# ldap sample for open ldap, need to rename this file to application-ldap.yml to make it effective
+spring:
+  ldap:
+    base: "dc=joinboom,dc=cn"
+    #配置管理员账号，用于搜索、匹配用户
+    username: "cn=joinboom,dc=joinboom,dc=cn"
+    password: "!joinboom!"
+    #用户过滤器，登录的时候用这个过滤器来搜索用户
+    searchFilter: "(cn={0})"
+    urls:
+      - "ldap://ldap.joinboom.net:389"
+
+ldap:
+  #配置 ldap 属性
+  mapping:
+    objectClass: "top"
+    #ldap用户惟一id，用来作为登录的id
+    loginId: "cn"
+    #ldap 用户名，用来作为显示名
+    userDisplayName: "cn"
+    #ldap 邮箱属性
+    email: "mail"
+
+logging:
+  level:
+    com.ctrip.framework.apollo: debug

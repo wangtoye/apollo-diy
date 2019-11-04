@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: apollo-adminservice
+  profiles:
+    active: github
+
+ctrip:
+  appid: 100003172
+  
+server:
+  port: 7208
+  
+logging:
+  file: C:/Users/admin/Desktop/卓尔金服/work/apollo/apollo-source-code/logs/apollo-admin.log

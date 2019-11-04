@@ -1,0 +1,30 @@
+eureka:
+  instance:
+    hostname: ${hostname:localhost}
+    preferIpAddress: true
+    status-page-url-path: /info
+    health-check-url-path: /health
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    #eureka客户需要多长时间发送心跳给eureka服务器，表明它仍然活着,默认为30 秒
+    lease-renewal-interval-in-seconds: 1
+    #Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认为90秒
+    lease-expiration-duration-in-seconds: 3
+  client:
+    serviceUrl:
+#      defaultZone: http://eureka-test1.joinboom.net:7201/eureka,http://eureka-test2.joinboom.net:7202/eureka
+      defaultZone: http://eureka-dev1.joinboom.net/eureka-server/eureka/,http://eureka-dev2.joinboom.net/eureka-server/eureka/
+    healthcheck:
+      enabled: true
+    #询问Eureka服务url信息变化的时间间隔（s），默认为300秒
+    eurekaServiceUrlPollIntervalSeconds: 60
+    #初始化实例信息到Eureka服务端的间隔时间，默认为40秒
+    initial-instance-info-replication-interval-seconds: 1
+    #更新实例信息的变化到Eureka服务端的间隔时间
+    instance-info-replication-interval-seconds: 1
+    #从eureka服务器注册表中获取注册信息的时间间隔（s），默认为30秒
+    registry-fetch-interval-seconds: 1
+
+management:
+  health:
+    status:
+      order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP
