@@ -364,7 +364,7 @@ CREATE TABLE `ServerConfig` (
 # ------------------------------------------------------------
 INSERT INTO `ServerConfig` (`Key`, `Cluster`, `Value`, `Comment`)
 VALUES
-    ('eureka.service.url', 'default', 'http://eureka1:eureka1@eureka-test1.joinboom.net:7201/eureka,http://eureka2:eureka2@eureka-test2.joinboom.net:7202/eureka', 'Eureka服务Url，多个service以英文逗号分隔'),
+    ('eureka.service.url', 'default', 'http://eureka1:eureka1@eureka-test1.wangtoye.net:7201/eureka,http://eureka2:eureka2@eureka-test2.wangtoye.net:7202/eureka', 'Eureka服务Url，多个service以英文逗号分隔'),
     ('namespace.lock.switch', 'default', 'false', '一次发布只能有一个人修改开关'),
     ('item.key.length.limit', 'default', '128', 'item key 最大长度限制'),
     ('item.value.length.limit', 'default', '20000', 'item value最大长度限制'),

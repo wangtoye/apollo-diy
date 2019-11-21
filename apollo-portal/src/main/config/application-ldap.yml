@@ -8,7 +8,7 @@ spring:
     #用户过滤器，登录的时候用这个过滤器来搜索用户
     searchFilter: "(cn={0})"
     urls:
-      - "ldap://ldap.joinboom.net:389"
+      - "ldap://ldap.wangtoye.net:389"
 
 ldap:
   #配置 ldap 属性

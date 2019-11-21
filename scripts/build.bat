@@ -1,20 +1,20 @@
 @echo off
 
 rem apollo config db info
-set apollo_config_db_url="jdbc:mysql://dev-db.joinboom.net:3306/ApolloConfigDB?characterEncoding=utf8"
+set apollo_config_db_url="jdbc:mysql://dev-db.wangtoye.net:3306/ApolloConfigDB?characterEncoding=utf8"
 set apollo_config_db_username="apollo"
 set apollo_config_db_password="apollo"
 
 rem apollo portal db info
-set apollo_portal_db_url="jdbc:mysql://dev-db.joinboom.net:3306/ApolloPortalDB?characterEncoding=utf8"
+set apollo_portal_db_url="jdbc:mysql://dev-db.wangtoye.net:3306/ApolloPortalDB?characterEncoding=utf8"
 set apollo_portal_db_username="apollo"
 set apollo_portal_db_password="apollo"
 
 rem meta server url, different environments should have different meta server addresses
-set dev_meta="http://config-test.joinboom.com:7207"
-set fat_meta="http://config-test.joinboom.com:7207"
-set uat_meta="http://config-test.joinboom.com:7207"
-set pro_meta="http://config-test.joinboom.com:7207"
+set dev_meta="http://config-test.wangtoye.net:7207"
+set fat_meta="http://config-test.wangtoye.net:7207"
+set uat_meta="http://config-test.wangtoye.net:7207"
+set pro_meta="http://config-test.wangtoye.net:7207"
 
 set META_SERVERS_OPTS=-Ddev_meta=%dev_meta% -Dfat_meta=%fat_meta% -Duat_meta=%uat_meta% -Dpro_meta=%pro_meta%
 

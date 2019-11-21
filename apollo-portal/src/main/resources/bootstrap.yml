@@ -17,8 +17,8 @@ eureka:
       - eureka1
       - eureka2
     serviceUrl:
-#      defaultZone: http://eureka-test1.joinboom.net:7201/eureka,http://eureka-test2.joinboom.net:7202/eureka
-      defaultZone: http://${eureka.client.loginUser[0]}:${eureka.client.loginPassword[0]}@eureka-test1.joinboom.net:7201/eureka,http://${eureka.client.loginUser[1]}:${eureka.client.loginPassword[1]}@eureka-test2.joinboom.net:7202/eureka
+#      defaultZone: http://eureka-test1.wangtoye.net:7201/eureka,http://eureka-test2.wangtoye.net:7202/eureka
+      defaultZone: http://${eureka.client.loginUser[0]}:${eureka.client.loginPassword[0]}@eureka-test1.wangtoye.net:7201/eureka,http://${eureka.client.loginUser[1]}:${eureka.client.loginPassword[1]}@eureka-test2.wangtoye.net:7202/eureka
     healthcheck:
       enabled: true
     #询问Eureka服务url信息变化的时间间隔（s），默认为300秒
