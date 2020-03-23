@@ -1,10 +1,10 @@
 # ldap sample for open ldap, need to rename this file to application-ldap.yml to make it effective
 spring:
   ldap:
-    base: "dc=joinboom,dc=cn"
+    base: "dc=wangtoye,dc=cn"
     #配置管理员账号，用于搜索、匹配用户
-    username: "cn=joinboom,dc=joinboom,dc=cn"
-    password: "!joinboom!"
+    username: "cn=wangtoye,dc=wangtoye,dc=cn"
+    password: "!wangtoye!"
     #用户过滤器，登录的时候用这个过滤器来搜索用户
     searchFilter: "(cn={0})"
     urls:
