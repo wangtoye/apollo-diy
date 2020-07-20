@@ -17,7 +17,7 @@ server:
     use-relative-redirects: true
 
 logging:
-  file: C:/Users/admin/Desktop/卓尔金服/work/apollo/apollo-source-code/logs/apollo-portal.log
+  file: C:/Users/admin/Desktop/work/apollo/apollo-source-code/logs/apollo-portal.log
 
 management:
   health:
